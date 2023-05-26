@@ -1,0 +1,209 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<div class="slideshow" data-sb="fadeInUp">
+    <div class="container-fluid">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div style="position:relative;height:0;padding-bottom:37%">
+                <div class="div-video-index">
+                    <video id="myVideo" width="640" height="360" autoplay loop style="position:absolute;width:100%;height:100%;left:0;z-index: -1">
+                        <source src="~/video/etron_smart_nha_thong_minh_intro.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <span id="mutebtn2"><button type="button">Tắt âm</button></span>
+                </div>
+            </div>
+        </div>
+        <div id="aaa" class="introindex" data-sb="fadeInUp">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home"><img src="~/image/introindex1.png" class="introimg"></a></li>
+                        <li><a data-toggle="tab" href="#menu1"><img src="~/image/introindex2.png" class="introimg"></a></li>
+                        <li><a data-toggle="tab" href="#menu2"><img src="~/image/introindex3.png" class="introimg"></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                        <img src="~/image/introindex11.png" class="img-responsive">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                                        <h3>CÔNG NGHỆ HÀNG ĐẦU</h3> 
+                                        <span class="line2"></span>                   
+                                        <p>Trải qua hơn 100 năm xây dựng và phát triển, <b>công nghệ nhà thông minh Leviton</b> được công nhận là một trong những hệ thống tiên tiến nhất để tạo nên một chuẩn mực mới cho cuộc sống: tiện nghi, sang trọng và hiện đại.</p>
+                                        <a href="gioi-thieu" class="btn btn-info" role="button">Tìm hiểu thêm</a>
+                                    </div>
+                        </div> 
+                        <div id="menu1" class="tab-pane fade">
+                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                        <img src="~/image/introindex22.png" class="img-responsive">
+                                    </div> 
+                                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                                        <h3>TRẢI NGHIỆM ĐẲNG CẤP</h3>
+                                        <span class="line2"></span>                    
+                                        <p>Quan niệm về tính đẳng cấp của một ngôi nhà hiện nay không chỉ dừng lại ở kiến trúc đẹp và sang trọng. <b>Nhà thông minh</b> giờ đây đánh dấu cho một <b>chuẩn mực mới của cuộc sống</b><br><br>Gia chủ có thể ra lệnh điều khiển ngôi nhà mình bằng ứng dụng điện thoại/máy tính bảng hay chỉ đơn giản là một câu nói!.</p>
+                                        <a href="#" class="btn btn-info" role="button">Tìm hiểu thêm</a>
+                                    </div> 
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                        <img src="~/image/introindex33.png" class="img-responsive">
+                                    </div> 
+                                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                                        <h3>DỊCH VỤ CHUYÊN NGHIỆP</h3>
+                                        <span class="line2"></span>                   
+                                        <p><b>Etron Smarthome</b> tự hào mang đến các <b>giải pháp nhà thông minh trọn gói và dịch vụ chuyên nghiệp</b> cho gia chủ.<br><br>Với chính sách <b>bảo hành hệ thống 5 năm</b> và chăm sóc trọn đời, <b>Etron Smarthome</b> cam kết chất lượng và sự hài lòng của khách hàng.</p>
+                                        <a href="#" class="btn btn-info" role="button">Tìm hiểu thêm</a>
+                                    </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center title-system">
+                            <br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="systemindex" data-sb="fadeInUp">
+            <div class="container">
+                <div class="row"></div>
+                @for (int i = 0; i < Model.Systems.Count(); i++)
+                    {
+                        var item = Model.Systems[i];
+                        <div class='col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center box_blue@((i < 4 ? i : i+1)%2+1)'>
+                            <a href='@("giai-phap#so" + item.Id)' class="btn btn-lg btn-info" role="button"><i class="fa @item.Icon" aria-hidden="true"></i></a>
+                            <h2><a href='@("giai-phap#so" + item.Id)'>HỆ THỐNG<br>@item.Title.ToUpper()</a></h2>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="realvirtualindex" data-sb="fadeInUp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <img src="~/image/virtual-index.png" alt="Etron - SmartHome">
+                    </div> 
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+                        <h2>TRẢI NGHIỆM THỰC TẾ</h2>
+                        <p>Tận hưởng cuộc sống hiện đại tiện nghi trong nhà thông minh <b>Etron SmartHome</b> với <b>trải nghiệm thực tế nhà mẫu</b> chưa từng có trên máy tính</p>
+                        <a href="trai-nghiem" class="btn btn-info" role="button">VÀO ỨNG DỤNG</a>       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scenario" data-sb="fadeInUpBig">
+            <div class="container-fluid">
+                 @for (int i = 0; i < Model.Scenarios.Count(); i++)
+                    {
+                        var item = Model.Scenarios[i];
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center scenario@(item.Id)">
+                            <a href="giai-phap#so9" class="btn btn-lg btn-info" role="button"><i class="fa @item.Icon" aria-hidden="true"></i></a>
+                            <p>Ngữ cảnh</p>
+                            <h4><a href="giai-phap#so9" target="_self">@item.Title.ToUpper()</a></h4>
+                            <span class="line"></span>
+                            <h5>@item.Description</h5>
+                        </div>
+                    }
+            </div>
+        </div>
+        <div class="moreinfo" data-sb="fadeInUp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 moreinfobox text-center">
+                        <h3 class="text-center"><a href="http://etron.com.vn/gioi-thieu" target="_self">NHÀ THÔNG MINH ETRON SMARTHOME</a></h3>
+                        <a href="gioi-thieu" target="_self"><img src="~/image/more-info-nha-thong-minh-etron-smarthome.png" alt="NHÀ THÔNG MINH ETRON SMARTHOME"></a>
+                        <p><b>Etron Smarthome</b> là đơn vị phân phối độc quyền giải pháp điện thông minh của hãng Leviton (Mỹ) – Giải pháp công nghệ với hơn 100 lịch sử hình thành và phát triển.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 moreinfobox text-center">
+                        <h3 class="text-center"><a href="http://etron.com.vn/giai-phap" target="_self">GIẢI PHÁP THÔNG MINH</a></h3>
+                        <a href="giai-phap" target="_self"><img src="~/image/more-info-giai-phap-thong-minh.png" alt="GIẢI PHÁP THÔNG MINH"></a>
+                        <p>Hệ thống nhà thông minh <b>Etron</b> là một hệ thống tổng thể và được điều khiển linh hoạt bằng: công tắc, điện thoại/máy tinh bảng, màn hình cảm ứng trung tâm và giọng nói.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 moreinfobox text-center">
+                        <h3 class="text-center"><a href="http://etron.com.vn/san-pham" target="_self">SẢN PHẨM</a></h3>
+                        <a href="san-pham" target="_self"><img src="~/image/more-info-san-pham-etron.png" alt="SẢN PHẨM ETRON"></a>
+                        <p>Công tắc cảm ứng, công tắc cơ học Leviton, thiết bị điều khiển âm nhạc, âm thanh đa vung, hệ thống camera an ninh, cảm ứng bật đèn cầu thang…</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 moreinfobox text-center">
+                        <h3 class="text-center"><a href="http://etron.com.vn/tin-tuc" target="_self">TIN TỨC</a></h3>
+                        <a href="tin-tuc" target="_self"><img src="~/image/more-info-tin-tuc-etron.png" alt="TIN TỨC ETRON"></a>
+                        <p>Khai trương nhà mẫu <b>Etron Smarthome</b> tại số 19 Phạm Thái Bường, Phường Tân Phong, Phú Mỹ Hưng, Q7.<br><a href="http://etron.com.vn/tin-tuc" target="_self"><b>Xem thêm tin tức mới</b></a></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 moreinfobox text-center">
+                        <h3 class="text-center"><a href="http://etron.com.vn/trai-nghiem" target="_self">TRẢI NGHIỆM THỰC TẾ</a></h3>
+                        <a href="trai-nghiem" target="_self"><img src="~/image/more-info-trai-nghiem-thuc-te.png" alt="TRẢI NGHIỆM THỰC TẾ"></a>
+                        <p>Trải nghiệm thực tế hệ thống Smarthome của <b>Etron</b> ngay tại nhà qua ứng dụng mô phỏng nhà mẫu để phần nào hiểu rõ về một ngôi nhà thông minh sẽ như thế nào?</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 moreinfobox text-center">
+                        <h3 class="text-center"><a href="http://etron.com.vn/lien-he" target="_self">LIÊN HỆ</a></h3>
+                        <a href="http://etron.com.vn/lien-he" target="_self"><img src="~/image/more-info-lien-he-etron.png" alt="LIÊN HỆ ETRON"></a>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i> Hotline miễn phí: <a href="tel:18007000">1800 7000</a><br>
+                        <a href="hoi-dap" target="_self"><i class="fa fa-question-circle" aria-hidden="true"></i> Câu hỏi thường gặp về hệ thống nhà thông minh</a><br>
+                        <a href="brochure" target="_blank"><i class="fa fa-folder-open" aria-hidden="true"></i> Xem Brochure</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+
+@section scripts {
+    <script>
+    $(document).ready(function () {
+
+        var showStaticMenuBar = false;
+
+        var vid = document.getElementById("myVideo");
+        var mutebtn2 = document.getElementById("mutebtn2");
+        mutebtn2.addEventListener("click", vidmute2, false);
+
+        function vidmute2() {
+            if (vid.muted) {
+                vid.muted = false;
+                mutebtn2.innerHTML = "Bật âm";
+            } else {
+                vid.muted = true;
+                mutebtn2.innerHTML = "Tắt âm";
+            }
+        }
+
+        $(window).scroll(function () {
+
+            var point = $('#aaa').position().top - 10;
+
+            //if the static menu is not yet visible...
+            if (showStaticMenuBar == false) {
+                //if I scroll more than 200px, I show it 
+                if ($(window).scrollTop() >= point) {
+                    //showing the static menu
+
+                    document.getElementById("myVideo").pause();
+
+                    showStaticMenuBar = true;
+
+                }
+
+            }
+            //if the static menu is already visible...
+            else {
+
+                if ($(window).scrollTop() < point) {
+                    document.getElementById("myVideo").play();
+
+                    //I define it as hidden
+                    showStaticMenuBar = false;
+                }
+            }
+
+        });
+
+    });
+    </script>
+}

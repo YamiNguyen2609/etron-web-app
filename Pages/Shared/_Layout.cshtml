@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppWebCore</title>
+    <meta name="google-site-verification" content="OT4Trlx60ximQV1wjGqoFPCDFLlWQ0E_ptsr4ihHgCo" />
+    <link rel="stylesheet" href="~/css/vendor-bootstrap.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/vendor-font-awesome.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/font-awesome.min.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/storybox.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/totop-style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="navigationbar">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="trang-chu"><img src="~/image/logo.png" alt="Etron - SmartHome"></a>
+                </div>
+                <div class="boxtop">
+                    <a href="tel:18007000"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;1800 7000</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:info@etron.com.vn"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;info@etron.com.vn</a>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/EtronSmarthome/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://plus.google.com/u/0/115803465285811321497" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="trang-chu" target="_self">TRANG CHỦ</a></li>
+                        <li><a href="gioi-thieu" target="_self">GIỚI THIỆU</a></li>
+                        <li><a href="giai-phap" target="_self">GIẢI PHÁP</a></li>
+                        <li><a href="trai-nghiem" target="_self">TRẢI NGHIỆM</a></li>
+                        <li><a href="san-pham" target="_self">SẢN PHẨM</a></li>
+                        <li><a href="cong-trinh" target="_self">CÔNG TRÌNH</a></li>
+                        <li><a href="hoi-dap" target="_self">HỎI ĐÁP</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">TIN TỨC <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="tin-tuc">Tin mới</a></li>
+                                <li><a href="kien-thuc">Kiến thức</a></li>
+                                <li><a href="tuyen-dung">Tuyển dụng</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="lien-he" target="_self">LIÊN HỆ</a></li
+                        
+                    ></ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    @RenderBody()
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <a href="trang-chu" target="_self"><img src="~/image/logo2.png" alt="Etron - SmartHome"></a><br>
+                    <p><a href="https://www.facebook.com/EtronSmarthome/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://plus.google.com/u/0/115803465285811321497" target="_blank"><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a></p><br>
+                    <h4>VĂN PHÒNG - NHÀ MẪU TẠI TP.HỒ CHÍ MINH</h4>
+                    <p>26 Cao Triều Phát, P. Tân Phong, Q.7</p>
+                    <p>028 5411 0066 - fax: 028 5411 0660</p>
+                </div> <!-- end col-->
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+                        <span class="blockspace"></span>
+                    </div>
+                    <h4>VĂN PHÒNG TẠI TP.HÀ NỘI</h4>
+                    <p>Chu Huy Mân, Long Biên, Hà Nội</p>
+                    <p>028 5411 0066</p>
+                </div> <!-- end col-->
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+                        <span class="blockspace"></span>
+                    </div>
+                    <h4>VĂN PHÒNG TẠI ĐÀ NẴNG</h4>
+                    <h4>Tầng 14, tòa nhà Phi Long</h4>
+                    <p>52 Nguyễn Văn Linh, Q. Hải Châu</p>
+                    <p>0236 3888 000 - fax: 0236 3653 000</p>
+                </div> <!-- end col-->
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <h3>THEO DÕI TIN TỨC</h3>
+                    <span class="line3"></span><br>
+                    <p>Vui lòng để lại email để nhận tin.</p>
+                    <form>
+                        <input type="email" class="form-control" id="email" value="Điền email"><br>
+                        <button type="submit" class="btn btn-default">Đăng ký</button>
+                    </form>
+                </div> <!-- end col-->
+            </div> <!-- end row-->
+        </div> <!-- end container-->
+    </footer> <!-- end footer-->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                    &copy; 2017 Etron - SmartHome. All rights reserved. Designed by <a href="#" target="_blank">OnStar Creative</a> <a href="<?php echo $__host . 'dang-nhap" target="_blank"><i class="fa fa-lock" aria-hidden="true"></i></a>.
+                </div>
+            </div> <!-- end row-->
+        </div> <!-- end container-->
+    </div> <!-- end copyright-->
+    <a href="#" class="scrollToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V0QFE17N"></script>
+    <script src="~/js/storybox-jquery.js"></script>
+    <script src="~/js/story-box.min.js"></script>
+    <script src="~/js/vendor-jquery.min.js"></script>
+    <script src="~/js/vendor-bootstrap.js"></script>
+    <script src="~/js/scoll-to-top.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D2V0QFE17N');
+    </script>
+    <script>
+        !function (f, b, e, v, n, t, s)
+        {
+            if (f.fbq)
+                return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq)
+                f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1740217152941998');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" 
+        src="https://www.facebook.com/tr?id=1740217152941998&ev=PageView
+        &noscript=1"/>
+    </noscript>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
