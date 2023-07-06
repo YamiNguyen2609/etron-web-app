@@ -1,0 +1,75 @@
+@page
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model ContactModel
+@{
+    ViewData["Title"] = "Liên Hệ Etron Smarthome";
+}
+<div class="slideshow">
+    <div class="container">
+        <div class="row"><br>
+            <img src="~/image/banner-lienhe.png" alt="Etron - Smarthome"
+                class="img-responsive"><br>
+        </div>
+    </div>
+</div>
+<div class="hidden-xs hidden-sm hidden-md hidden-lg">
+    <h1>LIÊN HỆ ETRON</h1>
+</div>
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                data-sb="fadeInLeftBig">
+                <h2>HOTLINE KỸ THUẬT&nbsp;&nbsp;&nbsp;<span class="hotline">18007000</span></h2>
+                <h2>HOTLINE TƯ VẤN&nbsp;&nbsp;&nbsp;<span class="hotline">028.54110066</span></h2><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8"
+                data-sb="fadeInLeftBig">
+                <h3>VĂN PHÒNG ETRON</h3>
+                <span class="line2"></span><br><br>
+                @for (int i = 0; i < Model.Branchs.Count(); i++)
+                {
+                    var item = Model.Branchs[i];
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div style="height: 15.2rem">
+                            <p class="bluecolor"><i class="fa fa-location-arrow"
+                                    aria-hidden="true"></i> <b>@item.Location.ToUpper()</b></p>
+                            <p><i class="fa fa-globe bluecolor" aria-hidden="true"></i>
+                                @item.Address</p>
+                            <p><i class="fa fa-phone bluecolor" aria-hidden="true"></i>
+                                @(item.Phone + (item.Fax != null ? " - fax: " +
+                                    item.Fax : ""))</p>
+                            <p><i class="fa fa-envelope bluecolor"
+                                    aria-hidden="true"></i>
+                                @item.Email</p>
+                        </div>
+                        <img src="~/image/contact1.png" alt="Etron - Smarthome"
+                            class="img-responsive">
+                    </div>
+                }
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
+                data-sb="fadeInRightBig">
+                <h3>LIÊN HỆ VỚI CHÚNG TÔI</h3>
+                <span class="line2"></span>
+                <form method="post">
+                    <input type="text" name="Name" id="contactfullname" size="32" placeholder="Họ tên"/>
+                    <input type="text" name="Phone"id="contactphonenumber" size="32" placeholder="Điện thoại"/>
+                    <input type="text" name="Email" id="contactemail" size="32" placeholder="Email"/>
+                    <textarea name="Description" id="contactcontent" cols="50" rows="5" placeholder="Nội dung"></textarea>
+                    <input type="submit" name="KT_Insert1" id="KT_Insert1" value="GỬI" asp-page-handler="SubmitContact" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="googlemap" data-sb="fadeInUpBig">
+    <div class="container-fluid">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0307243447487!2d106.70718011515284!3d10.732113692351657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f905031bda3%3A0xe3cfab3b36f16c50!2zMjYgQ2FvIFRyaeG7gXUgUGjDoXQsIFTDom4gUGhvbmcsIFF14bqtbiA3LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1635331483886!5m2!1sen!2s"
+            width="100%" height="350" frameborder="0" style="border:0"
+            allowfullscreen></iframe>
+    </div>
+</div>

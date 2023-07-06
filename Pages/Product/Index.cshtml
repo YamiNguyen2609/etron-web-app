@@ -1,0 +1,94 @@
+﻿@page
+@model ProductModel
+@{
+    ViewData["Title"] = "Các Sản Phẩm Công Tắc, Phím Bấm Và Thiết Bị Tại Etron Smarthome";
+}
+<div class="slideshow">
+    <div class="container">
+        <div class="row"><br>
+            <img src="~/image/banner-sanpham.png" alt="Etron - SmartHome"
+                class="img-responsive"><br>
+        </div>
+    </div>
+</div>
+
+<div class="product">
+	<div class="container">
+    	<div class="row">
+            <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+                <h1>SẢN PHẨM ETRON</h1>
+            </div>
+            <ul class="nav nav-tabs">
+                @for (int i = 0; i < Model.Products.Count; i++)
+                {
+                    var item = Model.Products[i];
+                    <li class='@(i==0?"active":"")'><a data-toggle="tab" href="#@item.Code"><i class="fa @item.Image[0]" aria-hidden="true"></i>@item.Title</a></li>
+                }
+            </ul>
+            <div class="tab-content">
+                @for (int i = 0; i < Model.Products.Count; i++)
+                {
+                    var item = Model.Products[i];
+                    <div id="@item.Code" class='tab-pane fade in @(i==0?"active":"")'>
+                        @for (int j = 0; j < item.Products.Count; j++)
+                        {
+                            var childItem = item.Products[j];
+                            <div class="row productbox" data-sb="fadeInUp">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                    @if(childItem.Image.Count == 1) {
+                                        
+                                        <img src="~/image/@childItem.Image[0]" alt="Etron - Smarthome" class="img-responsive">
+                                    }
+                                    else {
+                                        <div id="image-carousel" class="carousel slide" data-ride="carousel">
+                                            <ol class="carousel-indicators">
+                                                @for (int idx = 0; idx < childItem.Image.Count; idx++)
+                                                {
+                                                    <li data-target="#image-carousel" data-slide-to="@(idx+1)" class='@(idx==0?"active":"")'></li>
+                                                }
+                                            </ol>
+                                            <div class="carousel-inner">
+                                                @for (int idx = 0; idx < childItem.Image.Count; idx++)
+                                                {
+                                                    <div class='item @(idx==0?"active":"")'>
+                                                        <img src="~/image/@childItem.Image[idx]" alt="Etron - Smarthome">
+                                                    </div>
+                                                }
+                                                
+                                            </div>
+                                            <a class="left carousel-control" href="#image-carousel" data-slide="prev">
+                                                <span class="button_carousel"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="right carousel-control" href="#image-carousel" data-slide="next">
+                                                <span class="button_carousel"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    }
+                                </div> 
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                    <h3>@childItem.Title.ToUpper()</h3>
+                                    <h5>@childItem.Name.ToUpper()</h5>
+                                    <h4>MÃ SẢN PHẨM: <span style="color:#000000">@childItem.FullCode</span></h4>
+                                    <h4>MÔ TẢ:</h4>
+                                    <p>@Html.Raw(childItem.Description)</p>
+                                    <span class="line5"></span>
+                                    <h4>THƯƠNG HIỆU: <span style="color:#000000">@childItem.Brand</span></h4>
+                                    <p><b>Sản xuất:</b> @childItem.Origin</p>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
+                                            <a href="/lien-he" class="btn btn-info" role="button">Liên hệ <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<partial name="_Policy"/>

@@ -15,20 +15,76 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Owner\core-app\AppWebCore
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Owner/core-app/AppWebCore/Pages/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Contact/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdFxTdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Owner/core-app/AppWebCore/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Experience/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZXJpZW5jZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Experience/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZXJpZW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Owner/core-app/AppWebCore/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Owner/core-app/AppWebCore/Pages/Privacy/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeVxQcml2YWN5LmNzaHRtbA==
+[D:/Owner/core-app/AppWebCore/Pages/Manager/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlclxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Manager/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlclxMb2dpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Manager/ProductType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlclxQcm9kdWN0VHlwZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Manager/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlclxQcm9kdWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Overview/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3ZlcnZpZXdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Shared/_Box1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Cb3gxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Shared/_Box2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Cb3gyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Shared/_Policy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Qb2xpY3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Owner/core-app/AppWebCore/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Solution/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29sdXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Owner/core-app/AppWebCore/Pages/_ViewImports.cshtml]

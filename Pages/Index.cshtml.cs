@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using AppWebCore.Models;
+using AppWebCore.ViewModels;
 
 namespace AppWebCore.Pages;
 

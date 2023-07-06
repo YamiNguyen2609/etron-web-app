@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AppWebCore</title>
+    <title>@ViewData["Title"]</title>
     <meta name="google-site-verification" content="OT4Trlx60ximQV1wjGqoFPCDFLlWQ0E_ptsr4ihHgCo" />
     <link rel="stylesheet" href="~/css/vendor-bootstrap.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/vendor-font-awesome.css" asp-append-version="true" />
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="~/css/totop-style.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/owl.carousel.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
 </head>
 <body>
     <div class="navigationbar">

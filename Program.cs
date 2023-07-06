@@ -1,4 +1,7 @@
+using AppWebCore;
 using Microsoft.AspNetCore.Rewrite;
+using Microsoft.EntityFrameworkCore;
+using AppWebCore.Migrations;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -26,8 +29,18 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 var rewrite = new RewriteOptions()
-               .AddRewrite("trang-chu", "/", true)
-               .AddRewrite("gioi-thieu", "Privacy/Privacy", true);
+               .AddRewrite("dang-nhap", "Manager/Login", true)
+               .AddRewrite("giai-phap", "Solution", true)
+               .AddRewrite("gioi-thieu", "Overview", true)
+               .AddRewrite("lien-he-thanh-cong", "Contact/Success", true)
+               .AddRewrite("lien-he", "Contact", true)
+               .AddRewrite("quan-ly-he-thong", "/Manager", true)
+               .AddRewrite("quan-ly-loai-san-pham", "Manager/ProductType", true)
+               .AddRewrite("quan-ly-san-pham", "Manager/Product", true)
+               .AddRewrite("san-pham", "Product", true)
+               .AddRewrite(@"trai-nghiem/(\w+-?\w+)", "Experience/Detail?name=$1", true)
+               .AddRewrite("trai-nghiem", "Experience", true)
+               .AddRewrite("trang-chu", "/", true);
 app.UseRewriter(rewrite);
 
 app.Run();

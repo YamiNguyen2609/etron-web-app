@@ -1,0 +1,32 @@
+﻿@page
+@model ExperienceDetailModel
+@{
+    ViewData["Title"] = "Trải Nghiệm Nhà Thông Minh Thực Tế Ảo | Etron Smarthome";
+}
+
+<div class="slideshow">
+	<div class="container">
+    	<div class="row"><br>
+   	    	<img src="~/image/banner-trainghiem.png" alt="Etron - SmartHome" class="img-responsive"><br>
+        </div>
+    </div>
+</div>
+
+<div class="experience">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center box_experience">
+            	<div class="row">
+                	<h3>ỨNG DỤNG MÔ PHỎNG @Model.Experience.Title.ToUpper()</h3><!-- chen flash tại đây-->
+					<div id="altContent">
+					<h1>@Model.Experience.Name</h1>
+				</div>    
+                </div>
+                <div class="row"><br><br>
+                    <a href="/trai-nghiem" class="btn btn-info" role="button"><i class="fa fa-chevron-left" aria-hidden="true"></i> QUAY LẠI</a>
+                    <a href="/trang-chu" class="btn btn-info" role="button"><i class="fa fa-home" aria-hidden="true"></i> TRANG CHỦ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

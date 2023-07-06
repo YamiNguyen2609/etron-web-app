@@ -940,9 +940,6 @@ a {
     margin-top: 35px;
     margin-bottom: 15px;
     background-color: #f3f3f3;
-    -webkit-box-shadow: 8px 8px 0px 0px rgba(240,240,240,0.66);
-    -moz-box-shadow: 8px 8px 0px 0px rgba(240,240,240,0.66);
-    box-shadow: 8px 8px 0px 0px rgba(240,240,240,0.66);
 }
 .product .productbox .col-lg-4, .product .productbox .col-md-4 {
     padding-left: 0px;

@@ -1,0 +1,37 @@
+﻿@page
+@model ProductTypeModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Quản lý loại sản phẩm";
+    ViewData["Breadcrumb"] = "Loại sản Phẩm";  
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Loại sản phẩm</th>
+                            <th scope="col">Icon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < Model.Items.Count; i++)
+                        {
+                            var item = Model.Items[i];
+                            <tr>
+                                <th scope="row">@(i+1)</th>
+                                <td>@item.Name</td>
+                                <td><i class="fa font-16 @item.Icon"></i></td>
+                            </tr>
+                        }
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
