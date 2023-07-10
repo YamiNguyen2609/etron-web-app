@@ -1,14 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using AppWebCore.ViewModels;
 
 namespace AppWebCore.Pages;
 
 public class ProductModel : PageModel
 {
-    public List<ProductViewModel> Products;
+    public List<ProductTypeViewModel> Products;
+    private EtronContext _context;
     public ProductModel()
     {
+        _context = new EtronContext();
         this.GetDataProducts();
     }
 
@@ -17,25 +18,11 @@ public class ProductModel : PageModel
     }
 
     public void GetDataProducts() {
-        Products = new List<ProductViewModel>();
-        Products.Add(new ProductViewModel() {
-            Title = "Phím điều khiển",
-            Code = "control",
-            Image = new List<string> { "fa-calculator" },
-            Products = this.ProductControl()
-        });
-        Products.Add(new ProductViewModel() {
-            Title = "Hệ thống âm thanh",
-            Code = "music",
-            Image = new List<string> { "fa-music" },
-            Products = this.ProductMusic()
-        });
-        Products.Add(new ProductViewModel() {
-            Title = "Hệ thống cảm biến",
-            Code = "sensor",
-            Image = new List<string> { "fa-code-fork" },
-            Products = this.ProductControl()
-        });
+        Products = _context.ProductTypes.ToList().Select(item => new ProductTypeViewModel() {
+            Title = item.Name,
+            Icon = item.Icon,
+            Id = item.Id
+        }).ToList();
     }
 
     private List<ProductViewModel> ProductControl() {

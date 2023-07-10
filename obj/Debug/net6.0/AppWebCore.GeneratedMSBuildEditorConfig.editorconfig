@@ -35,6 +35,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZXJpZW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Owner/core-app/AppWebCore/Pages/Faq/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFxXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Owner/core-app/AppWebCore/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,6 +65,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Owner/core-app/AppWebCore/Pages/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Project/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Project/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Owner/core-app/AppWebCore/Pages/Recruit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjcnVpdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Owner/core-app/AppWebCore/Pages/Shared/_AdminLayout.cshtml]

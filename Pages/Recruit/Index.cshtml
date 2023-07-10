@@ -1,0 +1,44 @@
+﻿@page
+@model RecruitModel
+@{
+    ViewData["Title"] = "Các Giải Pháp Etron Smarthome Cung Cấp | Etron Smarthome";
+}
+<div class="slideshow">
+	<div class="container">
+    	<div class="row"><br>
+   	    	<img src="~/image/banner-tuyendung.png" alt="Etron - Smarthome" class="img-responsive"><br>
+        </div> <!-- end row-->
+  </div> <!-- end container-->
+</div> <!-- end slideshow-->
+<div class="hidden-xs hidden-sm hidden-md hidden-lg">
+    <h1>TUYỂN DỤNG ETRON</h1>
+</div>    
+<div class="news">
+	<div class="container">
+    	<div class="row" data-sb="fadeInUpBig">
+        	<div class="col-xs-12 col-sm-12">
+                @for (int i = 0; i < Model.Recruitments.Count; i++)
+                {
+                    var item = Model.Recruitments[i];
+                    <div class="row box_news">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <a href="tuyen-dung/@item.Slug" target="_self">
+                                <img src="~/image/@item.Image" alt="Etron Smarthome" class="img-responsive">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <h4>
+                                <a href="tuyen-dung/@item.Slug" target="_self">@item.Title</a>
+                            </h4>
+                            <span class="line2"></span>
+                            <h6>@item.DateString</h6>
+                            <p>@item.Description</p>
+                            <a href="tuyen-dung/@item.Slug" class="btn btn-info" role="button">Xem chi tiết <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<partial name="_Box2"/>

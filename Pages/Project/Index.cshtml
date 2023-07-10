@@ -1,0 +1,42 @@
+﻿@page
+@model ProjectModel
+@{
+    ViewData["Title"] = "Trải Nghiệm Nhà Thông Minh Thực Tế Ảo | Etron Smarthome";
+}
+
+<div class="slideshow">
+	<div class="container">
+    	<div class="row"><br>
+   	    	<img src="~/image/banner-duancongtrinhtieubieu.png" alt="Etron - SmartHome" class="img-responsive"><br>
+        </div>
+    </div>
+</div>
+<div class="project">
+    <div class="container">
+        <div class="row">
+            @for (int i = 0; i < Model.Projects.Count(); i++)
+            {
+                var item = Model.Projects[i];
+                @if(item.ImageExist) {
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 box_project" style="margin-bottom: 30px" data-sb="fadeInUpBig">
+                            <img src="/image/@item.Image" style="aspect-ratio: 1/1; border-radius: 15px" class="img-responsive">
+                            <div class="box_project_caption text-center">
+                                <h5>CÔNG TRÌNH NHÀ Ở</h5>
+                                <h3>
+                                    <a href="/cong-trinh/cong-trinh-nha-o-cua-@item.Slug" target="_self">
+                                        <span class="graycolor">@item.GenderName</span>
+                                        @item.Owner
+                                    </a>
+                                </h3>
+                                <p>
+                                    <a href="/cong-trinh/cong-trinh-nha-o-cua-@item.Slug" target="_self">@item.Address</a>
+                                </p>
+                            </div>
+                    </div> 
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<partial name="_Policy"/>

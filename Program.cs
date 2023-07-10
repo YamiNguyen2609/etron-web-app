@@ -1,7 +1,5 @@
 using AppWebCore;
 using Microsoft.AspNetCore.Rewrite;
-using Microsoft.EntityFrameworkCore;
-using AppWebCore.Migrations;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +15,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+DbInitializer.Initialize(new EtronContext());
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -29,9 +29,11 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 var rewrite = new RewriteOptions()
+               .AddRewrite("cong-trinh", "Project", true)
                .AddRewrite("dang-nhap", "Manager/Login", true)
                .AddRewrite("giai-phap", "Solution", true)
                .AddRewrite("gioi-thieu", "Overview", true)
+               .AddRewrite("hoi-dap", "Faq", true)
                .AddRewrite("lien-he-thanh-cong", "Contact/Success", true)
                .AddRewrite("lien-he", "Contact", true)
                .AddRewrite("quan-ly-he-thong", "/Manager", true)
@@ -40,6 +42,7 @@ var rewrite = new RewriteOptions()
                .AddRewrite("san-pham", "Product", true)
                .AddRewrite(@"trai-nghiem/(\w+-?\w+)", "Experience/Detail?name=$1", true)
                .AddRewrite("trai-nghiem", "Experience", true)
+               .AddRewrite("tuyen-dung", "Recruit", true)
                .AddRewrite("trang-chu", "/", true);
 app.UseRewriter(rewrite);
 

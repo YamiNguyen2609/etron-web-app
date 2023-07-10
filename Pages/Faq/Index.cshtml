@@ -1,0 +1,50 @@
+﻿@page
+@model FaqModel
+@{
+    ViewData["Title"] = "Các Giải Pháp Etron Smarthome Cung Cấp | Etron Smarthome";
+}
+<div class="slideshow">
+    <div class="container">
+        <div class="row"><br>
+            <img src="~/image/banner-hoidap.png" alt="Etron - SmartHome"
+                class="img-responsive"><br>
+        </div>
+    </div>
+</div>
+
+<div class="news">
+    <div class="container">
+        <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+          <h1>HỎI ĐÁP ETRON</h1>
+        </div>                
+        <div class="row" data-sb="fadeInUp">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1><i class="fa fa-question-circle" aria-hidden="true"></i> CÂU HỎI THƯỜNG GẶP</h1>
+                <br><br>
+                <div class="panel-group" id="accordion">
+                    @for (int i = 0; i < Model.Faqs.Count; i++)
+                    {
+                        var item = Model.Faqs[i];
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title" style="color:#484848;">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-@item.Id">
+                                        <b>@(i+1)) @Html.Raw(item.Question)</b>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse-@item.Id" class='panel-collapse collapse @(i == 0 ? "in": "")'>
+                                    <div class="panel-body">@Html.Raw(item.Anwser)</div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <br><br>
+                <h1><i class="fa fa-pencil" aria-hidden="true"></i> :: Quý khách cần thêm thông tin giải đáp vui lòng gọi số hotline: <a href="tel:18007000">1800 7000</a> hoặc mục <a href="/lien-he" target="_blank">Liên hệ</a>.</h1>
+                <br><br><br> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<partial name="_Box1"/>

@@ -19,5 +19,8 @@ namespace AppWebCore
         public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Faq> Faqs { get; set; }
+        public DbSet<Recruit> Recruitments { get; set; }
     }
 }

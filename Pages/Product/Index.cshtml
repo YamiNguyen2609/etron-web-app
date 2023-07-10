@@ -22,14 +22,14 @@
                 @for (int i = 0; i < Model.Products.Count; i++)
                 {
                     var item = Model.Products[i];
-                    <li class='@(i==0?"active":"")'><a data-toggle="tab" href="#@item.Code"><i class="fa @item.Image[0]" aria-hidden="true"></i>@item.Title</a></li>
+                    <li class='@(i==0?"active":"")'><a data-toggle="tab" href="#control@item.Id"><i class="fa @item.Icon" style="margin-right: 0.5rem" aria-hidden="true"></i>@item.Title</a></li>
                 }
             </ul>
             <div class="tab-content">
                 @for (int i = 0; i < Model.Products.Count; i++)
                 {
                     var item = Model.Products[i];
-                    <div id="@item.Code" class='tab-pane fade in @(i==0?"active":"")'>
+                    <div id="control@item.Id" class='tab-pane fade in @(i==0?"active":"")'>
                         @for (int j = 0; j < item.Products.Count; j++)
                         {
                             var childItem = item.Products[j];
